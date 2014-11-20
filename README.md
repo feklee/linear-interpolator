@@ -15,11 +15,11 @@ Example
 
 Code (`plotPoint` function not included):
 
-    var interpolatingPolynomial = require('linear-interpolator'),
-        f = interpolatingPolynomial([[-2, 2]
-                                     [-1, -0.5],
-                                     [0, 0.5],
-                                     [1.5, -1.5]]);
+    var linearInterpolator = require('linear-interpolator'),
+        f = linearInterpolator([[-2, 2]
+                                [-1, -0.5],
+                                [0, 0.5],
+                                [1.5, -1.5]]);
 
     for (x = -2; x < 2; x += 0.000001) {
         plotPoint(x, f(x));
