@@ -10,12 +10,22 @@ module.exports = function (points) {
         leftExtrapolated,
         rightExtrapolated;
 
-    if (points.length !== 0) {
-        points = points.sort(function (a, b) {
-            return a[0] - b[0];
-        });
-        first = points[0];
+    if (points.length === 0) {
+        return function () {
+            return 0;
+        };
     }
+
+    if (points.length === 1) {
+        return function () {
+            return points[0][1];
+        };
+    }
+
+    points = points.sort(function (a, b) {
+        return a[0] - b[0];
+    });
+    first = points[0];
 
     leftExtrapolated = function (x) {
         var a = points[0], b = points[1];
@@ -34,12 +44,6 @@ module.exports = function (points) {
     return function (x) {
         var i;
 
-        if (points.length === 0) {
-            return 0;
-        }
-        if (points.length === 1) {
-            return first[1];
-        }
         if (x <= first[0]) {
             return leftExtrapolated(x);
         }
