@@ -1,0 +1,16 @@
+{
+    "name": "linear-interpolator",
+    "version": "1.0.0",
+    "author": "Felix E. Klee <felix.klee@inka.de>",
+    "homepage": "https://github.com/feklee/linear-interpolator",
+    "description": "Linear interpolation and extrapolation",
+    "main": "node_main.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/feklee/linear-interpolator"
+    },
+    "license": "MIT",
+    "keywords" : ["interpolate", "interpolation", "interpolating", "linear",
+                  "math", "mathematics", "numeric"],
+    "bugs": "https://github.com/feklee/linear-interpolator/issues"
+}
