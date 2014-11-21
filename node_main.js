@@ -1,7 +1,5 @@
 /*jslint node: true, maxerr: 50, maxlen: 80 */
 
-/*global define */
-
 'use strict';
 
 module.exports = function (points) {
